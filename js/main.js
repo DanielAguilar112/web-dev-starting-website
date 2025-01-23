@@ -32,6 +32,24 @@ export function add(num1, num2) {
 }
 
 /**
+ * This function adds two numbers together and returns the sum. This demonstrates
+ * how to pass parameters to a function and return a value from a function
+ * from HTML.
+ * @param {number} a The first number to add
+ * @param {number} b The second number to add
+ * @returns {number} The sum of the two numbers
+ */
+export function sub(num1, num2) {
+    if (num1 === undefined || num2 === undefined) {
+        throw new Error('You must provide two numbers to add');
+    }
+    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+        throw new Error('You must provide two numbers to add');
+    }
+    return num1 - num2;
+}
+
+/**
  * This function fetches a random joke from the "Official Joke API" and returns it.
  * @returns {string} A joke in the format "setup - punchline"
  */

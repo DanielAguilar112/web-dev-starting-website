@@ -1,4 +1,4 @@
-import {helloWorld, add} from '../js/main.js';
+import {helloWorld, add, sub} from '../js/main.js';
 // Import the sinon library to allow us to create a spy on the console.log function
 import sinon from 'sinon';
 
@@ -45,6 +45,28 @@ QUnit.module('main.js tests', function() {
         const result = add(num1, num2);
         //Assert
         assert.equal(result, expected, 'add(2, -3) should return -1');
+    });
+
+    QUnit.test('add should return the sum of two numbers', function(assert) {
+        //Arrange
+        const num1 = 5;
+        const num2 = 4;
+        const expected = 9;
+        //Act
+        const result = add(num1, num2);
+        //Assert
+        assert.equal(result, expected, 'add(5, 4) should return 9');
+    });
+
+    QUnit.test('sub should return the difference of two numbers', function(assert) {
+        //Arrange
+        const num1 = 5;
+        const num2 = 4;
+        const expected = 1;
+        //Act
+        const result = sub(num1, num2);
+        //Assert
+        assert.equal(result, expected, 'sub(5, 4) should return 1');
     });
 
 });
